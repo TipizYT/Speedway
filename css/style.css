@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 5000px;
+}
+
+/*SCROLL TO TOP BUTTON*/
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+}
+
+/*NAV BAR*/
+header{
+    position: sticky;
+}
+
+.nav-bar a,li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lightcyan;
+    color: #fff;
+    position: sticky;
+}
+
+.horizontal-logo{
+    font-size: 32px;
+    font-weight: 0.1;
+    color: #000;
+}
+
+.menu{
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover{
+    background-color: #dde2e2;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.menu li{
+    padding: 5px 14px;
+}
+
+/*--------Dropdown Menu-----------*/
+
+.store-tab{
+    position: relative;
+}
+
+.store-dropdown{
+    background-color: rgb(170, 213, 213);
+    border-radius: 8px;
+    position: absolute;
+    display: none;
+    top: 35px;
+}
+
+.store-dropdown li + li{
+    margin-top: 10px;
+}
+
+.store-dropdown li{
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.store-dropdown li:hover{
+    background-color: #dde2e2;
+}
+
+.store-tab:hover .store-dropdown {
+    display: block;
+}
+   
+
+/*-----Slideshow-------*/
+
+.slideshow-container{
+    position: relative;
+    margin: auto;
+}
+
+.mySlides{
+    display: none;
+}
+
+.prev-btn, .next-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.7s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next-btn{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover, .next-btn:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.caption-txt{
+    color : #000;
+    font-size: 15x;
+    position: absolute;
+    bottom: 350px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.522);
+    height: 350px;
+    width: 700px;
+    border-radius: 50px;
+    top: 17em;
+    left: 23em;
+}
+
+.number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+  }
+
+.caption-txt h1{
+    font-size: 70px;
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-delay: 350ms;
+}
+
+.caption-txt p{
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-delay: 350ms;
+}
+
+.shop-now{
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    top: 30px;
+    padding: 10px 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s ease;
+    animation-name: slideInLeft;
+    animation-delay: 350ms;
+    animation-duration: 2s;
+}
+
+.shop-now:hover{
+    transform: translateX(5px);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*----------------------------------------ANIMATIONS-----------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+.animate__slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft
+}
