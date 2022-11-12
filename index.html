@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedway Store</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="progress">
+        <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
+    </div>
+    <header>
+        <nav class="nav-bar">
+            <!--LOGO-->
+            <div class="horizontal-logo">SPEEDWAY</div>
+            <!--NAVIGATION MENU-->
+            <ul class="nav-links">
+                <!--NAVIGATION MENU-->
+                <div class="menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li class="store-tab">
+                        <a href="#store">STORE</a>
+                        <!--DROPDOWN MENU-->
+                        <ul class="store-dropdown">
+                            <li><a href="#">Section 1</a></li>
+                            <li><a href="#">Section 2</a></li>
+                            <li><a href="#">Section 3</a></li>
+                            <li><a href="#">Section 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="number-text">1 / 5</div>
+            <img src="img/sofa-furniture.jpg" style="width: 100%;">
+            <div class="caption-txt">
+                <h1>Furniture Collection</h1>
+                <p class="furniture-desc">Modern Furniture Collection Starting from $460</p>
+                <button class="shop-now">Shop Now <span><i class="fa-regular fa-cart-shopping-fast"></i></span> </button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="number-text">2 / 5</div>
+            <img src="img/furniture-2.jpg" style="width: 100%;">
+            <div class="caption-txt">
+                <h1>Furniture Collection</h1>
+                <p class="furniture-desc">Modern Furniture Collection Starting from $560</p>
+                <button class="shop-now">Shop Now<span><i class="fa-regular fa-cart-shopping-fast"></i></span></button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="number-text">3 / 5</div>
+            <img src="img/furniture-3.jpg" style="width: 100%;">
+            <div class="caption-txt">
+                <h1>Furniture Collection</h1>
+                <p class="furniture-desc">Modern Furniture Collection Starting from $500</p>
+                <button class="shop-now">Shop Now<span><i class="fa-regular fa-cart-shopping-fast"></i></span></button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="number-text">4 / 5</div>
+            <img src="img/furniture-4.jpg" style="width: 100%;">
+            <div class="caption-txt">
+                <h1>Furniture Collection</h1>
+                <p class="furniture-desc">Modern Furniture Collection Starting from $520</p>
+                <button class="shop-now">Shop Now<span><i class="fa-regular fa-cart-shopping-fast"></i></span></button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="number-text">5 / 5</div>
+            <img src="img/sofa-furniture-5.jpg" style="width: 100%;">
+            <div class="caption-txt">
+                <h1>Furniture Collection</h1>
+                <p class="furniture-desc">Modern Furniture Collection Starting from $699</p>
+                <button class="shop-now">Shop Now<span> <i class="fa-regular fa-cart-shopping-fast"></i></span> </button>
+            </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next-btn" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+    <section>
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/wooden_kitchen_stool.png" alt="Wooden Kitched Stoll" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+<!--JS FILES-->
+<script src="/js/script.js"></script>
+</body>
+</html>
